@@ -7,6 +7,10 @@ var config = {
     create: create,
     update: update
   },
+  scale: {
+    //we place it in the middle of the page.
+    autoCenter: Phaser.Scale.CENTER_BOTH
+  },
   gravity: {
     x: 10,
     y: 10,
@@ -20,7 +24,7 @@ var game = new Phaser.Game(config);
 
   function preload () {
     this.load.image("background", "assets/background.png");
-    this.load.image("ball", "assets/ball.png");
+    this.load.image("ball", "assets/ball3.png");
   };
   function create(){
     this.add.image(500, 500, "background");
