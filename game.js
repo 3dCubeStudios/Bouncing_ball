@@ -21,18 +21,19 @@ var config = {
   },
 };
 var game = new Phaser.Game(config);
-
+// preloading the assets required for the scene
   function preload () {
     this.load.image("background", "assets/background.png");
-    this.load.image("ball", "assets/ball3.png");
+    this.load.image("ball", "assets/newball.png");
   };
+  //creating the scene with the pre loaded objects
   function create(){
     this.add.image(500, 500, "background");
     ball1 = this.physics.add.image(100, 0, "ball");
-    ball1.setScale(1); // to change size of the image 1 is original
+    ball1.setScale(0.9); // to change size of the image 1 is original
     ball1.body.velocity.setTo(200, 200); // velocity direction initial
-    ball1.body.collideWorldBounds = true;
-    ball1.body.bounce.set(1);
+    ball1.body.collideWorldBounds = true; //setting up the bounds
+    ball1.body.bounce.set(1);//adding the bounce value
   };
   function update(){
 
